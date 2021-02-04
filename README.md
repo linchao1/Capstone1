@@ -271,10 +271,11 @@ Below is the output response.
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
+My screencast should demonstrate:
+- Working models of one AutoML and two with hyperparameter tuning.
+- Demo of the deployed model with ACI using the AutoML model.
 - Demo of a sample request sent to the endpoint and its response
+** Screen cast** https://drive.google.com/file/d/1z27w5H-DZvFJwZaZdTCTCZr3dkvMNONl/view?usp=sharing
 
 ## Future Improvements
 I delved into the specific aspects of which primary metric to use. I concluded the following which is that other primary metrics may provide more robust predictions for people, especially doctors, that may wish to predict the likeliness of a patient having heart failure.  I'll discuss Accuracy, Precision and Recall.
