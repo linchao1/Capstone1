@@ -280,7 +280,7 @@ My screencast demonstrates:
 <li>- Demo of a sample request sent to the endpoint and its response <\li>
   <\ul>
 
-** Screen cast** https://drive.google.com/file/d/1CJikQUvE4W_Crb615ujpHU7veTe6TYcn/view?usp=sharing 
+**Screencast** https://drive.google.com/file/d/1CJikQUvE4W_Crb615ujpHU7veTe6TYcn/view?usp=sharing 
 
 ## Future Improvements
 I delved into the specific aspects of which primary metric to use. I concluded the following which is that other primary metrics may provide more robust predictions for people, especially doctors, that may wish to predict the likeliness of a patient having heart failure.  I'll discuss Accuracy, Precision and Recall.
