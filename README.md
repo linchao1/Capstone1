@@ -126,8 +126,8 @@ For my hyperparameter Tuning, I did the following two experiments with the same 
 
 Hyperdrive Experiments | Accuracy 
 -------- | -------------  
-Experiment 1       |  86.6
-Experiment 2      |  89.3
+Experiment 1       |  89.3
+Experiment 2      |  86.6
 
 I conjecture this difference is due to the RandomParameterSampling function I chose for the parameter sampler. RandomParameter sampling supports discrete and continuous hyperparameters. I really liked that it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space.Hence this resulted in variations to my Accuracy primary metrics.
 
