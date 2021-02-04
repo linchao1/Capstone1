@@ -318,5 +318,7 @@ recall_score_weighted: the arithmetic mean of recall for each class, weighted by
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-understand-automated-ml
 
 ## Summary
-My summary findings are that machine learning can be an assistance to doctors to help patients determine if they are at risk to heart failure, with an ability to discern between false positives and false negatives. Given the opportunities to probe deeper into a patients health, with false positives, the risk in a wrong diagnosis may be mitigated with further tests.  I hope my mother is proud of this capstone project I did in her honor.  Thank you, Mom for being my inspiration. 
+My summary findings are that machine learning can be an assistance to doctors to help with their patients to determine if they have heart failure, especially with the machine learning's model to be tuned for false positives and false negatives. Given the opportunities to probe deeper into a patients health, with false positives, the risk of a wrong diagnosis may be mitigated with further tests.  
+
+I hope my mother is proud of this capstone project I did in her honor.  Thank you, Mom, for being my inspiration. 
 
