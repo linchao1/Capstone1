@@ -209,7 +209,7 @@ Screen shot of the best model trained with it's parameters.
 
 
 ## Model Deployment
-Here's my overview of the deployed model and instructions on how to query the endpoint with a sample input.  I deployed the AutoML model since the Accuracy for AutoML and Hyperdrive, were very close so I deployed AutoML using the ACI service.
+Here's my overview of the deployed model and instructions on how to query the endpoint with a sample input.  I deployed the AutoML model since the Accuracy for AutoML and Hyperparameter Tuning, were less than .03% apart ( accurarcy of 86.33% for AutoML vs. 86.66% Hyperparameter tuning Experiment 2) so I deployed AutoML using the ACI service.
 
 Here are the steps for deployment.
 
@@ -308,4 +308,7 @@ recall_score_weighted: the arithmetic mean of recall for each class, weighted by
 **Comment**- Recall metric is also interesting to me, as it is focused on making sure to find all positive results, in other words, if someone has heart failure likelihood, this model will not leave anyone out, or guessing.
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-understand-automated-ml
+
+## Summary
+My summary findings are that machine learning can be an assistance to doctors to help patients determine if they are at risk to heart failure, with an ability to discern between false positives and false negatives. Given the opportunities to probe deeper into a patients health, with false positives, the risk in a wrong diagnosis may be mitigated with further tests.  I hope my mother is proud of this capstone project I did in her honor.  Thank you, Mom for being my inspiration. 
 
