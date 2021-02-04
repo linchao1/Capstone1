@@ -64,7 +64,7 @@ Here is the `automl` settings and configuration I used for this experiment.
 
 For discussion purposes, I suggest that it is better to be false postive (7), than to be false negative (4). This is because further tests can be done on false positive people, whereas false negative people may assume they're okay, and skip further tests.  I believe recall may be another good primary parameter to use for this reason, since it catches all positive instances. 
  
-### Results - Showing Resuls of 86.66%
+### AutoML Results - Showing Resuls of 86.66%
 The best result with AutoML was with voting ensemble with 86.8%.  The parameters were as described above.
 ```
 In [31]:
