@@ -10,6 +10,8 @@ The dataset I chose is from Kaggle's Heart Failure dataset. I am doing this proj
 
 ## Project Set Up and Installation
 I set this project up both using the Virtual Machine provided by Udacity, as well as using portal.azure.com.  Some days one platform performed better than the other. 
+This project's architecture is defined as a devops project. This nanodegree course is focused on these steps.
+
 
 ### Dataset- Heart Failure Dataset
 
