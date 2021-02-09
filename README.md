@@ -147,10 +147,44 @@ Screenshot of the best model being registered.
 
 ## Hyperparameter Tuning
 
-For my hyperparameter Tuning, I did the following two experiments with the same parameter samplers ( ps)  with the different resulting accuracy. 
-    {"--C": uniform(0.2, 1),
-    "--max_iter": choice(50, 100, 150)})
+For hyperparameter tuning, I used Azure Machine Learning HyperDrive package to tune hyperparameters with the Azure SDK. Here are the basic steps
 
+1. Define the parameter search space
+2. Specify a primary metric to optimize
+3. Specify early termination policy for low-performing runs
+4. Allocate resources
+5. Launch an experiment with the defined configuration
+6. Visualize the training runs
+7. Select the best configuration for your model
+
+The parameter sampling method to use over the hyperparameter space includes the following:
+
+Random sampling
+Grid sampling
+Bayesian sampling
+
+I chose random sampling with continuous hyperparameters, ````--C````
+
+Continuous hyperparameters-- The Continuous hyperparameters are specified as a distribution over a continuous range of values:
+uniform(low, high) - Returns a value uniformly distributed between low of 0.2 to high of 1.0.
+
+
+Specify early termination policy
+Automatically terminate poorly performing runs with an early termination policy. Early termination improves computational efficiency.
+
+You can configure the following parameters that control when a policy is applied:
+
+evaluation_interval: the frequency of applying the policy. Each time the training script logs the primary metric counts as one interval. An evaluation_interval of 1 will apply the policy every time the training script reports the primary metric. An evaluation_interval of 2 will apply the policy every other time. If not specified, evaluation_interval is set to 1 by default.
+
+
+````
+
+#ps 
+ps = RandomParameterSampling({"--C": uniform(0.2, 1),
+                             "--max_iter": choice(50, 100, 150)})
+````
+For my hyperparameter Tuning, I did the following two experiments with the same parameter samplers ( ps)  with the different resulting accuracy. 
+    
 Hyperdrive Experiments | Accuracy 
 -------- | -------------  
 Experiment 1       |  89.3
