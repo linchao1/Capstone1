@@ -43,6 +43,28 @@ The specific task is classification, and the features I am detecting is "DEATH_E
 ### Access
 I accessed the dataset through this public, externally available url https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv. 
 
+For the Hyperdrive progam, the following code was used, with TabularDatasetFactory Class, and the METHODS
+from_delimited_files, Create a TabularDataset to represent tabular data in delimited files (e.g. CSV and TSV).
+````# Try to load the dataset from the Workspace. Otherwise, create it from the file
+# NOTE: update the key to match the dataset name
+found = False
+key = "Heartdataset"
+description_text = "Heart DataSet"
+
+if key in ws.datasets.keys(): 
+        found = True
+        dataset = ws.datasets[key]
+
+if not found:
+        # Create AML Dataset and register it into Workspace
+        data_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00519/heart_failure_clinical_records_dataset.csv'
+        dataset = Dataset.Tabular.from_delimited_files(data_url)        
+        #Register Dataset in Workspace
+        dataset = dataset.register(workspace=ws,
+                                   name=key,
+                                   description=description_text)
+
+````
 ## Automated ML
 Here is the `automl` settings and configuration I used for this experiment.
 
