@@ -254,6 +254,17 @@ Screen shot of the `RunDetails` widget
 Screen shot of the best model trained with it's parameters.
 ![Diagram 4 Best Model Trained](screenshots/HD_new_new_results_best_runrpng.png?raw=true "Best Model")
 
+Here's the code showing the mode was registered.
+````
+#TODO: Register the best model
+# Save the best model
+
+model = best_run.register_model(model_name = 'HeartRateModel', 
+                                           model_path = './outputs/model.joblib',
+                                           model_framework= Model.Framework.SCIKITLEARN)
+print("Model saved successfully")
+Model saved successfully
+````
 
 ## Model Deployment
 Here's my overview of the deployed model and instructions on how to query the endpoint with a sample input.  I deployed the AutoML model since the Accuracy for AutoML and Hyperparameter Tuning, were less than .03% apart ( accurarcy of 86.33% for AutoML vs. 86.66% Hyperparameter tuning Experiment 2) so I deployed AutoML using the ACI service.
