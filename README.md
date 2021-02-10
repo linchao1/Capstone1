@@ -157,41 +157,29 @@ For hyperparameter tuning, I used Azure Machine Learning HyperDrive package to t
 6. Visualize the training runs
 7. Select the best configuration for your model
 
-The parameter sampling method to use over the hyperparameter space includes Random sampling, Grid sampling, & Bayesian sampling. I chose random sampling with continuous hyperparameters, ````--C````
+The parameter sampling method to use over the hyperparameter space includes Random sampling, Grid sampling, & Bayesian sampling. I chose random sampling with continuous hyperparameters.
 
 ````
-
 #ps 
 ps = RandomParameterSampling({"--C": uniform(0.2, 1),
                              "--max_iter": choice(50, 100, 150)})
-                             
-                             
+                                                         
 ````
 
 This will define a search space with two parameters, --C ( continuous parameters over a continuous range of values) and --max_iter. The --C can have a uniform distribution with 0.2 as a minimum value and 1 as a maximum value, and the max_iter will be a choice of [50,100,150].
-
-For my hyperparameter Tuning, I did the following two experiments with the same parameter samplers ( ps)  with the different resulting accuracy. 
-    
-Hyperdrive Experiments | Accuracy 
--------- | -------------  
-Experiment 1       |  89.3
-Experiment 2      |  86.6
-
-I conjecture this difference is due to the RandomParameterSampling function I chose for the parameter sampler. RandomParameter sampling supports discrete and continuous hyperparameters. I really liked that it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space.Hence this resulted in variations to my Accuracy primary metrics.
 
 Here are my hyperdrive hyperparameter policy and estimator.
 
 For my early termination policy, I chose *Bandit Policy*, as this automatically terminate poorly performing runs with an early termination policy. Early termination improves computational efficiency. Bandit policy is based on slack factor/slack amount and evaluation interval. Bandit terminates runs where the primary metric is not within the specified slack factor/slack amount compared to the best performing run. 
 
-
+````
 # Specify a Policy- Bandit Policy
 #policy = ### YOUR CODE HERE ###
 policy = BanditPolicy(slack_factor = 0.1, evaluation_interval=2, delay_evaluation=5)
 
 ````
+My SKLearn Estimator is train2.py
 ````
-if "training" not in os.listdir():
-    os.mkdir("./training")
     
 #create a SKLearn estimator for train2.py
 
@@ -199,11 +187,11 @@ est = SKLearn(source_directory = './',
                      entry_script = 'train2.py',
                      compute_target = compute_target)
 
+````
+
+````
 # Create a HyperDriveConfig using the estimator, hyperparameter sampler, and policy.
 #hyperdrive_config = ### YOUR CODE HERE ###
-from azureml.train.hyperdrive import HyperDriveConfig
-
-#primary_metric_name='Accuracy',
 hyperdrive_config = HyperDriveConfig(estimator = est,
                              hyperparameter_sampling=ps,
                              policy=policy,
@@ -213,7 +201,7 @@ hyperdrive_config = HyperDriveConfig(estimator = est,
                              max_concurrent_runs=4)
                              
                              
-```
+````
 ### My Reasons for choosing the values and configuration. 
 For the parameter Sampler, as I mentioned above, I chose Random sampling, as it supports discrete and continuous hyperparameters. I really liked that it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space.
 
