@@ -188,7 +188,7 @@ est = SKLearn(source_directory = './',
                      compute_target = compute_target)
 
 ````
-
+My  hyperdrive configuration has the following: the primary metric is accuracy, and the goal is to maximize for accuracy, with the max total runs as 20, and max concurrent runs at 4.  I chose a maximum total of 20 runs so that the model would finish in about 30 minutes. The max concurrent runs of 4 was defined by the workspace. 
 ````
 # Create a HyperDriveConfig using the estimator, hyperparameter sampler, and policy.
 #hyperdrive_config = ### YOUR CODE HERE ###
