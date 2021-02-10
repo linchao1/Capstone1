@@ -254,7 +254,7 @@ Screen shot of the `RunDetails` widget
 Screen shot of the best model trained with it's parameters.
 ![Diagram 4 Best Model Trained](screenshots/HD_new_new_results_best_runrpng.png?raw=true "Best Model")
 
-Here's the code showing the mode was registered.
+Here's the code showing the model was registered and saved.
 ````
 #TODO: Register the best model
 # Save the best model
