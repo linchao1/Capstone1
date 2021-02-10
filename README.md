@@ -216,6 +216,15 @@ the primary metric is accuracy, and the goal is to maximize for accuracy, with t
 
 ### Results
 
+I did two experiments with the same sampling parameters, and here are my accuracy results.
+
+Experiments | Accuracy
+------------ | -------------
+Experiment 1| 89.33%
+Experiment 2 | 86.66%
+
+I attribute the differences to my use of parameter sampling method of Random sampling. In random sampling, hyperparameter values are randomly selected from the defined search space.  Hence this attributed to the differences in accuracy results.
+
 ## HD EXPERIMENT 1 - Showing Accuracy of 89.33% 
 
 The results of my model was: 
