@@ -157,16 +157,7 @@ For hyperparameter tuning, I used Azure Machine Learning HyperDrive package to t
 6. Visualize the training runs
 7. Select the best configuration for your model
 
-The parameter sampling method to use over the hyperparameter space includes the following:
-
-Random sampling
-Grid sampling
-Bayesian sampling
-
-I chose random sampling with continuous hyperparameters, ````--C````
-
-Continuous hyperparameters-- The Continuous hyperparameters are specified as a distribution over a continuous range of values:
-uniform(low, high) - Returns a value uniformly distributed between low of 0.2 to high of 1.0.
+The parameter sampling method to use over the hyperparameter space includes Random sampling, Grid sampling, & Bayesian sampling. I chose random sampling with continuous hyperparameters, ````--C````
 
 ````
 
@@ -177,7 +168,7 @@ ps = RandomParameterSampling({"--C": uniform(0.2, 1),
                              
 ````
 
-This will define a search space with two parameters, --C ( continuous parameters) and --max_iter. The --C can have a uniform distribution with 0.2 as a minimum value and 1 as a maximum value, and the max_iter will be a choice of [50,100,150].
+This will define a search space with two parameters, --C ( continuous parameters over a continuous range of values) and --max_iter. The --C can have a uniform distribution with 0.2 as a minimum value and 1 as a maximum value, and the max_iter will be a choice of [50,100,150].
 
 For my hyperparameter Tuning, I did the following two experiments with the same parameter samplers ( ps)  with the different resulting accuracy. 
     
@@ -188,17 +179,17 @@ Experiment 2      |  86.6
 
 I conjecture this difference is due to the RandomParameterSampling function I chose for the parameter sampler. RandomParameter sampling supports discrete and continuous hyperparameters. I really liked that it supports early termination of low-performance runs. In random sampling, hyperparameter values are randomly selected from the defined search space.Hence this resulted in variations to my Accuracy primary metrics.
 
-Here are my hyperdrive hyperparameter sampler, estimator, and policy.
-```
-# Specify parameter sampler
-#ps = ### YOUR CODE HERE ###
-ps = RandomParameterSampling({"--C": uniform(0.2, 1),
-                             "--max_iter": choice(50, 100, 150)})
+Here are my hyperdrive hyperparameter policy and estimator.
 
-# Specify a Policy
+For my early termination policy, I chose *Bandit Policy*, as this automatically terminate poorly performing runs with an early termination policy. Early termination improves computational efficiency. Bandit policy is based on slack factor/slack amount and evaluation interval. Bandit terminates runs where the primary metric is not within the specified slack factor/slack amount compared to the best performing run. 
+
+
+# Specify a Policy- Bandit Policy
 #policy = ### YOUR CODE HERE ###
 policy = BanditPolicy(slack_factor = 0.1, evaluation_interval=2, delay_evaluation=5)
 
+````
+````
 if "training" not in os.listdir():
     os.mkdir("./training")
     
