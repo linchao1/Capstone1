@@ -11,7 +11,7 @@
 * [HyperparameterTuning](#Hyperparameter-Tuning)
 * [Model Deployment](#Model-Deployment)
 * [Screen Recording](#Screen-Recording)
-* [Description of Future Improvements](#Description-of-future-improvements)
+* [Description of Future Improvements](#Description-of-Future-Improvements)
 
 
 ## Introduction
