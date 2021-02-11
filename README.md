@@ -311,7 +311,7 @@ print(aci_service.state)
 
 here's the conda environment information
 
-![Diagram 7 Best Model Trained](screenshots/HD_new_new_results_best_runrpng.png?raw=true "Best Model")
+![Diagram 7 Best Model Trained](screenshots/conda_new_feb10.png?raw=true "Best Model")
 
 
 Here's the output:
