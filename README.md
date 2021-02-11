@@ -372,9 +372,9 @@ Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy
 ## Screen Recording
 <ul>
 My screencast demonstrates:
-<li>- Working models of one AutoML and two with hyperparameter tuning.<\li>
-<li>- Demo of the deployed model with ACI using the AutoML model.<\li>
-<li>- Demo of a sample request sent to the endpoint and its response <\li>
+<li>- A Working models of one AutoML.</li>
+<li>- Demo of the deployed model with ACI using the AutoML model.</li>
+<li>- Demo of a sample request sent to the endpoint and its response </li>
   <\ul>
 
 **Screencast** https://drive.google.com/file/d/1CJikQUvE4W_Crb615ujpHU7veTe6TYcn/view?usp=sharing 
