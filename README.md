@@ -347,6 +347,9 @@ I used endpoint1.py to make the prediction and the output was:
 "{\"result\": [1, 1]}"
 result: [1, 1], where '1' means the result in the 'DEATH_EVENT' column
 ````
+Here's the screen shot
+![Diagram 10 Predictiond](screenshots/final_prediction.png?raw=true "Confusion Matrix")
+
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
 
