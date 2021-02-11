@@ -3,6 +3,17 @@
 
 ![Diagram 1 Heart Failure](screenshots/heart_failure.png?raw=true "heart failure")
 
+## Table of contents
+* [Introduction](#Introduction)
+* [Project Setup and Installation ](#Project-Set-Up-and-Installation)
+* [Dataset](#Dataset-Heart-Failure-Dataset)
+* [AutoML](#Automated-ML)
+* [HyperparameterTuning](#Hyperparameter-Tuning)
+* [Model Deployment](#Model-Deployment)
+* [Screen Recording](#Screen-Recording)
+* [Description of Future Improvements](#Description-of-future-improvements)
+
+
 ## Introduction
 This project is my capstone project for Uadacity's Azure Machine Learning Nanodegree.  
 
@@ -14,7 +25,7 @@ This project's architecture is defined as a devops project. This nanodegree cour
 ![Diagram 2 Dev Ops ](screenshots/dev_ops.png?raw=true "Dev Ops Architecture").
 
 For this capstone project, the main focus of steps is on training, packaging, validating, and deploying the models.  We didnot focus on monitoring, but it would be an essenatil part of dev ops.
-### Dataset- Heart Failure Dataset
+## Dataset- Heart Failure Dataset
 
 ## Overview
 The dataset I chose is from Kaggle's https://www.kaggle.com/andrewmvd/heart-failure-clinical-data.  This dataset has the following variables, with DEATH_EVENT as the desired prediction.  The following tables shows the data fields for a person.  
@@ -368,7 +379,7 @@ My screencast demonstrates:
 
 **Screencast** https://drive.google.com/file/d/1CJikQUvE4W_Crb615ujpHU7veTe6TYcn/view?usp=sharing 
 
-## Future Improvements
+## Description of Future Improvements
 I delved into the specific aspects of which primary metric to use. I concluded the following which is that other primary metrics may provide more robust predictions for people, especially doctors, that may wish to predict the likeliness of a patient having heart failure.  I'll discuss Accuracy, Precision and Recall.
 
 (1) **Accuracy**-  Through out this nano degree, accuracy has been the primary metric that we used in both Project 1 and Project 2. Accuracy is the ratio of predictions that exactly match the true class labels.  This metric is straight forward.
