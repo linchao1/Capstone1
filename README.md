@@ -20,7 +20,7 @@ This project is my capstone project for Uadacity's Azure Machine Learning Nanode
 
 The dataset I chose is from Kaggle's Heart Failure dataset. I am doing this project in honor of my mother who passed away from heart failure, this month, five years ago. I am very interested to learn the factors that influence heart failure, and to see if I might be at risk,too, for this disease.  I also wish to mention that heart failure is a very specific form of heart disease, where the heart is too weak to pump the necessary blood flow. In the dataset, the 'ejection_fraction' is an important attribute which indicates the strength of each heart pump.  Ejection_fraction is a number that shows how strong the heart can pump blood. It is normally obtained by using MRI or echocardiogram. 
 
-## Project Architecture, Project Set Up and Installation
+## Project Architecture
 I set this project up both using the Virtual Machine provided by Udacity, as well as using portal.azure.com.  Some days one platform performed better than the other. 
 This project's architecture is defined as a devops project. This nanodegree course is focused on these steps.
 ![Diagram 2 Dev Ops ](screenshots/dev_ops.png?raw=true "Dev Ops Architecture").
