@@ -289,10 +289,14 @@ from azureml.core.webservice import Webservice
 from azureml.core.model import Model
 from azureml.core.environment import Environment
 
-inference_config = InferenceConfig(entry_script=script_file_name)
+environment = best_run.get_environment()
+
+inference_config = InferenceConfig(entry_script=script_file_name, environment = environment)
 
 aciconfig = AciWebservice.deploy_configuration(cpu_cores = 1, 
                                                memory_gb = 1, 
+                                               enable_app_insights = True,
+                                               auth_enabled = True,
                                                tags = {'area': "bmData", 'type': "automl_classification"}, 
                                                description = 'sample service for Automl Classification')
 
@@ -301,6 +305,7 @@ print(aci_service_name)
 aci_service = Model.deploy(ws, aci_service_name, [model], inference_config, aciconfig)
 aci_service.wait_for_deployment(True)
 print(aci_service.state)
+
 )
 ```
 Below is how I tested the Aci service.
