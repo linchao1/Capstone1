@@ -89,7 +89,7 @@ Here is the `automl` settings and configuration I used for this experiment.
  Comments on my AutoML settings and configurations:
  The key items to note are that the task is a classification, with DEATH_EVENT as the value to be predicted, and Accuracy is the primary metric to be maximized. Based on my discussion above about false positives and false negatives,  I used the confusion matrix to show my point.  The matrix is shown below with the primary metric as Accuracy.
  
- ![Diagram 2 Best Model Trained](screenshots/confusion_m.png?raw=true "Confusion Matrix")
+ ![Diagram 2 Best Model Trained](screenshots/final_confusion_matrix.png?raw=true "Confusion Matrix")
 
 For discussion purposes, I suggest that it is better to be false postive (7), than to be false negative (4). This is because further tests can be done on false positive people, whereas false negative people may assume they're okay, and skip further tests.  I believe recall may be another good primary parameter to use for this reason, since it catches all positive instances. 
  
