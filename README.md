@@ -12,6 +12,7 @@
 * [Model Deployment](#Model-Deployment)
 * [Screen Recording](#Screen-Recording)
 * [Description of Future Improvements](#Description-of-Future-Improvements)
+* [Summary](#Summary)
 
 
 ## Introduction
