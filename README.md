@@ -95,10 +95,10 @@ For discussion purposes, I suggest that it is better to be false postive (7), th
  
 ### AutoML Results - Showing Resuls of 86.62%
 The best result with AutoML was with voting ensemble with 86.62%.  The parameters were as described above.
-```
+````
 best_run.get_metrics(name='accuracy')
 {'accuracy': 0.8662055335968379}
-```
+````
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 Screen shot of the `RunDetails` widget
@@ -282,7 +282,7 @@ I followed these steps, and my deployed model worked.  I queried the endpoint wi
 
 Below is how I deployed the model to the compute target.
 
-```
+````
 from azureml.core.model import InferenceConfig
 from azureml.core.webservice import AciWebservice
 from azureml.core.webservice import Webservice
@@ -307,7 +307,13 @@ aci_service.wait_for_deployment(True)
 print(aci_service.state)
 
 )
-```
+````
+
+here's the conda environment information
+
+![Diagram 7 Best Model Trained](screenshots/HD_new_new_results_best_runrpng.png?raw=true "Best Model")
+
+
 Here's the output:
 ````
 aci-automl-heart-service
@@ -325,7 +331,7 @@ print ('Service state:' + aci_service.state)
 print ('Service scoring URI: ' + aci_service.scoring_uri)
 print ('Service Swagger URI:' + aci_service.swagger_uri)
 print ('Service primary authentication key:' + primary)
-```
+````
 Here are the print outputs
 ````
 Service state:Healthy
@@ -334,10 +340,10 @@ Service Swagger URI:http://03f074b7-b00f-4202-b072-ea3eb4427cd0.southcentralus.a
 Service primary authentication key:x6WpaCh2SPfU4HIpGpVZq2x142mU88Is
 ````
 I used endpoint1.py to make the prediction and the output was:
-```
+````
 "{\"result\": [1, 1]}"
 result: [1, 1], where '1' means the result in the 'DEATH_EVENT' column
-```
+````
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
 
