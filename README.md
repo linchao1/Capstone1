@@ -312,9 +312,9 @@ print(aci_service.state)
 
 )
 ````
+Here is the healthy deployment screenshot
 
-
-![Diagram 8 Final Healthy](screenshots/final_healthy.png?raw=true "Best Model")
+![Diagram 8 Final Healthy](screenshots/final_endpoint.png?raw=true "Best Model")
 
 
 Here's the output:
