@@ -102,7 +102,7 @@ best_run.get_metrics(name='accuracy')
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 Screen shot of the `RunDetails` widget
-![Diagram 1 RunDetails Widget](screenshots/automl_run_complete_new.png?raw=true "RunDetails")
+![Diagram 1 RunDetails Widget](screenshots/run_complete_final.png?raw=true "RunDetails")
 
 Screen shot of the best model with it's runID  with it's parameters.
 ![Diagram 2 Best Model Trained](screenshots/automl_best_run_id_new.png?raw=true "Best Model")
