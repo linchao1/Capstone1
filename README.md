@@ -412,7 +412,6 @@ recall_score_weighted: the arithmetic mean of recall for each class, weighted by
 **Comment**- Recall metric is also interesting to me, as it is focused on making sure to find all positive results, in other words, if someone has heart failure likelihood, this model will not leave anyone out, or guessing.
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-understand-automated-ml
-
 ## Summary
 My summary findings are that machine learning can be an assistance to doctors to help with their patients to determine if they have heart failure, especially with the machine learning's model to be tuned for false positives and false negatives. Given the opportunities to probe deeper into a patients health, with false positives, the risk of a wrong diagnosis may be mitigated with further tests.  
 
