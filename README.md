@@ -280,6 +280,10 @@ Here are the steps for deployment.
 
 I followed these steps, and my deployed model worked.  I queried the endpoint with the first two data rows in dataset, and the query replied with the predictions which were correct.
 
+here's the conda environment information
+
+![Diagram 7 Best Model Trained](screenshots/conda_new_feb10.png?raw=true "Best Model")
+
 Below is how I deployed the model to the compute target.
 
 ````
@@ -309,9 +313,8 @@ print(aci_service.state)
 )
 ````
 
-here's the conda environment information
 
-![Diagram 7 Best Model Trained](screenshots/conda_new_feb10.png?raw=true "Best Model")
+![Diagram 8 Final Healthy](screenshots/final_healthy.png?raw=true "Best Model")
 
 
 Here's the output:
