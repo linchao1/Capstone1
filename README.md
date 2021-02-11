@@ -5,7 +5,7 @@
 
 ## Table of contents
 * [Introduction](#Introduction)
-* [Architecture--Project Setup and Installation ](# Architecture--Project-Set-Up-and-Installation)
+* [Architecture:Project Setup and Installation ](# Architecture:Project-Set-Up-and-Installation)
 * [Dataset](#Dataset-Heart-Failure-Dataset)
 * [AutoML](#Automated-ML)
 * [HyperparameterTuning](#Hyperparameter-Tuning)
