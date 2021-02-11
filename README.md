@@ -153,7 +153,7 @@ For hyperparameter tuning, I used Azure Machine Learning HyperDrive package to t
 4. Allocate resources
 5. Launch an experiment with the defined configuration
 6. Visualize the training runs
-7. Select the best configuration for your model
+7. Select the best configuration for my model
 
 The parameter sampling method to use over the hyperparameter space includes Random sampling, Grid sampling, & Bayesian sampling. I chose random sampling with continuous hyperparameters.
 
@@ -238,6 +238,11 @@ Screen shot of the `RunDetails` widget
 
 Screen shot of the best model trained with it's parameters.
 ![Diagram 4 Best Model Trained](screenshots/hyperparamter_outputScreen_1.png?raw=true "Best Model")
+
+Screen shot of the best model trained with --C  and max parameters.
+![Diagram 6 HD --C](screenshots/hd_best_model_c_max_iter_new_feb9.png?raw=true "Max and --C")
+
+
 
 ## HD EXPERIMENT 2 - Showing Accuracy of 86.66% 
 
