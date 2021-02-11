@@ -376,7 +376,7 @@ My screencast demonstrates:
 <li>- A Working models of one AutoML.</li>
 <li>- Demo of the deployed model with ACI using the AutoML model.</li>
 <li>- Demo of a sample request sent to the endpoint and its response </li>
-  <\ul>
+</ul>
 
 **Screencast** https://drive.google.com/file/d/1zeUQoSkBDezqUGhR3FhKI9Dd7qWwiB0p/view?usp=sharing
 
