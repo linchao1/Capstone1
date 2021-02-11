@@ -93,13 +93,11 @@ Here is the `automl` settings and configuration I used for this experiment.
 
 For discussion purposes, I suggest that it is better to be false postive (7), than to be false negative (4). This is because further tests can be done on false positive people, whereas false negative people may assume they're okay, and skip further tests.  I believe recall may be another good primary parameter to use for this reason, since it catches all positive instances. 
  
-### AutoML Results - Showing Resuls of 86.66%
-The best result with AutoML was with voting ensemble with 86.8%.  The parameters were as described above.
+### AutoML Results - Showing Resuls of 86.62%
+The best result with AutoML was with voting ensemble with 86.62%.  The parameters were as described above.
 ```
-In [31]:
 best_run.get_metrics(name='accuracy')
-Out[31]:
-{'accuracy': 0.866403162055336}
+{'accuracy': 0.8662055335968379}
 ```
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
