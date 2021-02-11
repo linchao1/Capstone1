@@ -308,25 +308,35 @@ print(aci_service.state)
 
 )
 ```
-Below is how I tested the Aci service.
+Here's the output:
+````
+aci-automl-heart-service
+Tips: You can try get_logs(): https://aka.ms/debugimage#dockerlog or local deployment: https://aka.ms/debugimage#debug-locally to debug if deployment takes longer than 10 minutes.
+Running.........................................
+Succeeded
+ACI service creation operation finished, operation "Succeeded"
+Healthy
+````
+Here are the scoring uri, and the key
+````
+#get scoring uri and primary authentication key
+primary, secondary = aci_service.get_keys()
+print ('Service state:' + aci_service.state)
+print ('Service scoring URI: ' + aci_service.scoring_uri)
+print ('Service Swagger URI:' + aci_service.swagger_uri)
+print ('Service primary authentication key:' + primary)
 ```
- (import json
-
-
-input_payload = json.dumps({
- #   'data': test[:2].values.tolist(),
-    'data': tosend1,
-    'method': 'predict'  # If you have a classification model, you can get probabilities by changing this to 'predict_proba'.
-})
-
-output = aci_service.run(input_payload)
-
-print('Result of prediction is, where 0 is not heart disease, 1 is there is heart disease:', output)
-)
+Here are the print outputs
+````
+Service state:Healthy
+Service scoring URI: http://03f074b7-b00f-4202-b072-ea3eb4427cd0.southcentralus.azurecontainer.io/score
+Service Swagger URI:http://03f074b7-b00f-4202-b072-ea3eb4427cd0.southcentralus.azurecontainer.io/swagger.json
+Service primary authentication key:x6WpaCh2SPfU4HIpGpVZq2x142mU88Is
+````
+I used endpoint1.py to make the prediction and the output was:
 ```
-Below is the output response. 
-```
-    Result of prediction is, where 0 is not heart disease, 1 is there is heart disease: {"result": [0, 0]}
+"{\"result\": [1, 1]}"
+result: [1, 1], where '1' means the result in the 'DEATH_EVENT' column
 ```
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
