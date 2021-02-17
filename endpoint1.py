@@ -44,7 +44,7 @@ data = {"data":
            "time": 6
           },
         ]
-       }
+        }
 
 # Convert to JSON string
 input_data = json.dumps(data)
