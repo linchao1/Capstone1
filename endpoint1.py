@@ -42,7 +42,7 @@ data = {"data":
            "sex": 1,
            "smoking": 0,
            "time": 6
-          },           
+          },
         ]
        }
 
