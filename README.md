@@ -367,7 +367,11 @@ result: [1, 1], where '1' means the result in the 'DEATH_EVENT' column
 Here's the screen shot
 ![Diagram 10 Predictiond](screenshots/final_prediction.png?raw=true "Confusion Matrix")
 
- Update:  I've added the file containing the environment details.
+ Update:   I've added the file containing the environment details.
+ 
+ Update: I've checked my phyton code to be PEP8 compliant with this tool
+ http://pep8online.com/checkresult 
+ 
 
 Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=azcli
 
